@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    
+    <script>
+      function showProducts(){
+        var products=[
+          {Id: 1, Name:"samsung tv", price:50, photo:"https://picsum.photos/id/90/500/300"},
+          {Id: 2, Name:"Forest", price:80000, photo:"https://picsum.photos/id/70/500/300"},
+          {Id: 3, Name:"nike", price:3000, photo:"https://picsum.photos/id/85/500/300"},
+        ];
+        var pic=document.getElementById("pic");
+        var txtRange = document.getElementById("txtRange");
+        var prodId = document.getElementById("prodId")
+        var prodName = document.getElementById("prodName");
+        var prodPrice=document.getElementById("prodPrice");
+
+        pic.src=products[txtRange.value].photo;
+        prodId.innerHTML=products[txtRange.value].Id;
+        prodName.innerHTML = products[txtRange.value].Name;
+        prodPrice.innerHTML = products[txtRange.value].price;
+      }
+    </script>
+  </head>
+  <body>
+<div>
+  <table width="500" border="2" align="center">
+    <tr>
+      <td>
+        <img src="https://picsum.photos/id/90/500/300" id="pic"  alt="">
+      </td>
+    </tr>
+    <tr>
+      <td>productId</td>
+      <td id="prodId">1</td>
+    </tr>
+    <tr>
+      <td>productName</td>
+      <td id="prodName">Fence </td>
+    </tr>
+    <tr>
+      <td>productPrice</td>
+      <td id="prodPrice">50</td>
+    </tr>
+  </table>
+  <div>
+    <input type="range" id="txtRange" min="0" max="2" value="0"  onchange="showProducts()">
+  </div>
+</div>
+
+    
+    
+  </body>
+</html>

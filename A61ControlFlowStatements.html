@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function selectHardDisk(){
+      var lstHdd = document.getElementById('lstHdd');
+      var txtRam = document.getElementById('txtRam');
+
+      if(parseInt(lstHdd.value)>=5){
+        txtRam.disabled = false;
+        lstHdd.disabled = true;
+      }
+    }
+
+    function selectRam(){
+      var txtRam = document.getElementById('txtRam');
+      var lstGraphic = document.getElementById('lstGraphic');
+      if(txtRam.value>=4){
+        lstGraphic.disabled=false;
+        txtRam.disabled= true;
+      }
+    }
+
+    function selectGraphic(){
+      var lstGraphic= document.getElementById('lstGraphic');
+      var btnInstall= document.getElementById('btnInstall');
+      if(lstGraphic.value == "yes"){
+        btnInstall.disabled = false;
+        lstGraphic.disabled = true;
+      }
+    }
+
+    function install(){
+      document.write('game installed successfully');
+    }
+
+  </script>
+</head>
+<body>
+
+<div>
+  <fieldset>
+    <legend>Install game</legend>
+    <dl>
+      <dt>Select available hard disk space</dt>
+      <dd>
+        <select id="lstHdd" onchange="selectHardDisk()">
+          <option value="2">2GB</option>
+          <option value="5GB">5GB</option>
+          <option value="10GB">10GB</option>
+          
+        </select>
+      </dd>
+      <dt>select available ram</dt>
+      <dd>
+        <input type="number" min="1" max="8"
+        value="1" id="txtRam" disabled onchange="selectRam()">
+      </dd>
+      <dt>Is Graphic card Available</dt>
+      <dd>
+        <select name="" id="lstGraphic" disabled onchange="selectGraphic()">
+          <option value="select" selected disabled>Select</option>
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+        </select>
+      </dd>
+      <br>
+      <input type="button" id="btnInstall" value="install" disabled onclick="install()">
+    </dl>
+  </fieldset>
+</div>
+
+</body>
+</html>
