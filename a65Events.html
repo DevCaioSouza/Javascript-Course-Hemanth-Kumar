@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script>
+  function submitClick(obj, event){
+    document.write('button name : '+obj.name+'<br>'+
+    'button value: ' +obj.value+ '<br>'+ 
+    "clicked at x: "+event.clientx);
+  }
+</script>
+</head>
+<body>
+  <input 
+  type="button" 
+  name="btnSubmit" 
+  value="submit" 
+  onclick="submitClick(this, event)">
+</body>
+</html>

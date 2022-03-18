@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<script>
+  var newWindow;
+  function viewLarge(){
+    newWindow = window.open("https://picsum.photos/id/237/500/300", "Doggo", "width=500 height=300")
+  }
+
+ 
+</script>
+</head>
+<body>
+
+<!-- JS BROWSER OBJECTS
+JS PROVIDES SEVERAL BROWSER OBJECTS THAT ARE USED TO HANDLE VARIOUS
+CLIENT SIDE INTERACTIONS AND ALSO TO MANIPULATE THE ELEMENTS 
+IN BOM HIERARCHY 
+
+THE BROWSER OBJECTS ARE: 
+  1- WINDOW
+  2- LOCATION
+  3- NAVIGATOR
+  4- HISTORY
+  5- DOCUMENT
+-->
+
+<div>
+  <img src="https://picsum.photos/id/237/250/150" ondblclick="viewLarge()">
+  <p>Double Click on Image to view large</p>
+  <input type="button" value="close" onclick="newWindow.close()">
+  <input type="button" value="print" onclick="window.print()">
+</div>
+
+</body>
+</html>
